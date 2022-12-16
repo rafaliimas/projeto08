@@ -1,0 +1,156 @@
+div#total{ /*div#total é só uma tag diferente p fazer o CSS do total da pagina. O total poderia ser feito da maneira mais usual: #divtotal*/
+    width: 95%;
+    max-width: 980px;/*largura maxima
+    a div total vai ocupar 95% da tela do dispositivo q tá acessando
+    porém, ela vai ser no max 980px*/
+    height: auto;
+    margin: auto;
+}
+
+header#topo{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+div#logo{
+    width: 204px;
+    height: 84px;
+    margin: 20px auto;
+
+}
+
+nav#menu{
+    width: 100%;
+    height: 40px;
+    background-color: #111;
+    float: left;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav#menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 30px;
+    line-height: 40px;
+    /*o line height centraliza o conteudo na margem superior e inferior, mas p isso acontecer, a div do menu tem q ter 40px, e por isso o valor do line-height tem q ser 40px
+    poderia ser outro valor tambem, mas o valor tem q ser o mesmo da altura do menu p, que no nosso caso é 40px, p line height ajustar.*/
+    text-transform: uppercase;
+
+}
+
+nav#menu a:hover{
+    text-decoration: underline;
+   
+
+}
+div#banner{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+div#banner img{
+    width: 100%;
+
+}
+
+footer#rodape{
+    width: 100%;
+    height: 30px;
+    clear: both; /*o clear both joga o rodapé lá p parte inferior */
+    text-align: center;
+    float: left;
+    background-color: #111;
+    line-height: 30px;
+    color: #fff;
+
+}
+
+article#conteudo{
+    width: 60%;
+    float: left;
+
+}
+
+aside#coluna{
+    width: 35%;
+    float: right;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: rgb(62, 39, 8);
+
+}
+h2{
+    color: rgb(62, 39, 8);
+    
+}
+
+p{
+    color: rgb(19, 9, 44);
+}
+
+div#anunciotablet{
+    width: 100%;
+    float: left;
+    background-color: aquamarine;
+    text-align: center;
+    color: #111;
+    padding: 5px 0;
+    display: none; /*o display none faz com que a gente n veja a divisao no desktop..
+    essa divisao anunciotablet só vai ser visualizada em tablets*/
+
+}
+/*media query*/
+    @media screen and (min-width:668px) and (max-width:768px) {
+        div#anunciotablet{
+            display: block;/*mostra*/
+    }
+    
+}
+
+@media screen and (max-width:536px) {
+    
+        nav#menu{
+            height: auto;
+        }
+}
+
+@media screen and (min-width:668px) and (max-width:768px) {
+    nav#menu a{
+        display: block;/*mostra*/
+        border-bottom: 1px solid #fff ;
+}
+
+}
+@media screen and (min-width:668px) and (max-width:768px) {
+    nav#menu a:last-child{
+    
+        border:none;
+}
+
+}
+
+div#logo, div#logo img{
+    width: 150px;
+    height: auto;
+
+
+}
+
+@media screen and (max-width:375px) {
+    article#conteudo, aside#coluna{
+        display: block;/*mostra*/
+        border-bottom: 1px solid #fff ;
+    }
+    div#banner{
+        display: none;
+    }
+}
